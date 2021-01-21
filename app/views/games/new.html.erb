@@ -5,14 +5,14 @@
     <span class="btn btn-success"><%= letter %></span>
   <% end %>
 
-  <form action="">
-    <div class="form-row">
-        <label for="guess">What is the longest word you can find?</label>
-        <br>
-        <input type="text" id="guess">
-        <input type="submit" value="Guess!">
+  <form action="/score">
+    <p>What is the longest word you can find?</p>
+    <div class="input-group input-group-lg">
+      <input type="text" name="question" class="form-control">
+      <span class="input-group-btn">
+        <input type="submit" value="Go!" class="btn btn-danger">
+      </span>
     </div>
   </form>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
 </div>
