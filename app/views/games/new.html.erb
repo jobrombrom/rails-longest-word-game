@@ -1,2 +1,18 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<div class="container">
+  <h1>New game</h1>
+
+  <% @letters.each do |letter| %>
+    <span class="btn btn-success"><%= letter %></span>
+  <% end %>
+
+  <form action="">
+    <div class="form-row">
+        <label for="guess">What is the longest word you can find?</label>
+        <br>
+        <input type="text" id="guess">
+        <input type="submit" value="Guess!">
+    </div>
+  </form>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+</div>
